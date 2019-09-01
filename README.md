@@ -100,8 +100,8 @@ class FusionEKF {
     private:
 
     bool is_initialized_;
-    R_lidar; H_lidar;           //lidar measurement covariance and transition
-    R_radar; Hj_;               //radar measurement covariance and transition
+    R_lidar; H_lidar;           //lidar measurement covariance matrix and transition matrix
+    R_radar; Hj_;               //radar measurement covariance matrix and transition matrix
 
     public:
 
@@ -109,7 +109,7 @@ class FusionEKF {
     FusionEKF();
     /*
         automatically initialise the efk_ object
-        set R_lidar, H_lidar, R_radar, Hj values;
+        set above R_lidar, H_lidar, R_radar, Hj values;
     */
     virtual  ~FusionEKF();
     
@@ -148,7 +148,7 @@ class FusionEKF {
 
 
     */
-}   
+};
 ```
 
 
